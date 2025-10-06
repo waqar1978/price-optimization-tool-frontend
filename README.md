@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# 🏷️ Price Optimization Tool – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend interface** for the *Price Optimization Tool*, designed for business users to manage products, visualize demand forecasts, and receive optimized pricing recommendations.
 
-Currently, two official plugins are available:
+Built with **React (TypeScript)** and **Vite**, the frontend offers a responsive, data-driven UI for interacting with the Django REST API backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For the backend part of this project, see the [Price Optimization Tool Backend](https://github.com/shahsad-kp/price-optimization-tool-backend).
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Product Management**
+    - Add, view, edit, and delete products.
+    - Filter and search products by name, category, etc.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Demand Forecast Visualization**
+    - View forecasted demand vs selling price using interactive charts.
+    - Visualized via Chart.js or Recharts.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Pricing Optimization**
+    - Display optimized product prices in a tabular format.
+    - Fetch optimized data directly from backend API.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Clean & Responsive UI**
+    - Fully responsive layout using Tailwind CSS.
+    - UI based on Figma-inspired mockups from assessment.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🧰 Tech Stack
+
+- **Frontend Framework:** React + TypeScript + Vite
+- **UI Styling:** Tailwind CSS
+- **State Management:** React Query / Context API
+- **Charting:** Chart.js or Recharts
+- **API Communication:** Axios (REST API)
+- **Routing:** React Router DOM
+
+---
+
+## ⚙️ How to Run
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/yourusername/price-optimization-tool.git
+cd price-optimization-tool/frontend
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2️⃣ Install Dependencies
+```bash
+npm install
 ```
+### 3️⃣ Configure Environment
+Create a `.env` file in the frontend root directory:
+```dotenv
+VITE_API_BASE_URL=http://127.0.0.1:8000/api/v1/
+```
+### 4️⃣ Run Development Server
+```bash
+npm run dev
+```
+Access the app at http://localhost:5173/.
+
+### 5️⃣ Build for Production
+```bash
+npm run build
+```
+The production-ready files will be in the `dist` folder.
