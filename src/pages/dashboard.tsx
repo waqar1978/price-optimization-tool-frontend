@@ -1,15 +1,11 @@
-import {Box, Stack, Typography} from "@mui/material";
-import Logo from '../assets/logo.png';
+import {Stack, Typography} from "@mui/material";
 import ProductIcon from '../assets/product-icon.png';
 import MarketInsightIcon from '../assets/market-research.png';
-import {DashboardCard} from "../components/dashboard/dashboard-card.tsx";
+import {DashboardCard} from "../components";
 
 function DashboardPage() {
     return (
         <Stack direction={'column'} minHeight={'100vh'} width={'100vw'} alignItems={'center'} py={5} spacing={5}>
-            <Box width={150}>
-                <img src={Logo} width={'100%'} height={'100%'} alt={'logo'} />
-            </Box>
             <Stack direction={'column'} alignItems={'center'}>
                 <Typography variant={'h2'} sx={{fontWeight: 'fontWeightLight'}} gutterBottom={true}>
                     Price Optimization tool
