@@ -5,7 +5,8 @@ import {DashboardCard} from "../components";
 
 function DashboardPage() {
     return (
-        <Stack direction={'column'} minHeight={'100vh'} width={'100vw'} alignItems={'center'} py={5} spacing={5}>
+        <Stack direction={'column'} minHeight={'100vh'} width={'100vw'} alignItems={'center'} justifyContent={'center'}
+               py={5} spacing={5}>
             <Stack direction={'column'} alignItems={'center'}>
                 <Typography variant={'h2'} sx={{fontWeight: 'fontWeightLight'}} gutterBottom={true}>
                     Price Optimization tool
@@ -38,4 +39,4 @@ function DashboardPage() {
     );
 }
 
-    export {DashboardPage};
+export {DashboardPage};
